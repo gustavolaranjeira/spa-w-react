@@ -10,6 +10,8 @@
   padding: 0.8rem 1.2rem;
   box-sizing: border-box;
   transition: 0.1s;
+  display: inline-block;
+  text-align: center;
 }
 
 .button:hover,
