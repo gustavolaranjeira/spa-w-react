@@ -11,6 +11,10 @@ const types = {
     message:
       'Preencha no mínimo de 6 caracteres, pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial',
   },
+  number: {
+    regex: /\b([0-9]|[1-9][0-9]|100)\b/,
+    message: 'Preencha um número de 0 a 100',
+  },
 };
 
 const useForm = (type) => {
