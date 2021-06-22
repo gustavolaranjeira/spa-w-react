@@ -9,16 +9,19 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={`${styles.nav} container`}>
-        <Link className={styles.logo} to="/" aria-label="Home">
+        <Link className={styles.logo} to="/spa-w-react/" aria-label="Home">
           <Dogs />
         </Link>
         {data ? (
           <div className={styles.login}>
-            <Link to="/conta">{data.nome}</Link>
+            <Link
+              style={{ marginRight: '0.2rem' }}
+              to="/spa-w-react/conta"
+            >{`${data.nome}`}</Link>
             <button onClick={userLogout}>Sair</button>
           </div>
         ) : (
-          <Link className={styles.login} to="/login">
+          <Link className={styles.login} to="/spa-w-react/login">
             Sign in / Sign up
           </Link>
         )}

@@ -18,7 +18,7 @@ export const UserStorage = ({ children }) => {
       setLoading(false);
       setLogin(false);
       window.localStorage.removeItem('token');
-      navigate('/login');
+      navigate('/spa-w-react/login');
     },
     [navigate],
   );
@@ -29,7 +29,6 @@ export const UserStorage = ({ children }) => {
     const json = await response.json();
     setData(json);
     setLogin(true);
-    // console.log(json);
   }
 
   async function userLogin(username, password) {
@@ -45,7 +44,7 @@ export const UserStorage = ({ children }) => {
       if (token.ok) throw new Error(`Error: ${token.statusText}`);
       window.localStorage.setItem('token', token);
       await getUser(token);
-      navigate('/conta');
+      navigate('/spa-w-react/conta');
     } catch (error) {
       setError(error.message);
       setLogin(false);

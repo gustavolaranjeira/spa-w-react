@@ -9,10 +9,10 @@ const UserHeader = () => {
 
   React.useEffect(() => {
     switch (location.pathname) {
-      case '/conta/estatisticas':
+      case '/spa-w-react/conta/estatisticas':
         setTitle('Estatísticas');
         break;
-      case '/conta/postar':
+      case '/spa-w-react/conta/postar':
         setTitle('Postar');
         break;
       default:

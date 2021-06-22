@@ -3,7 +3,7 @@
     "**/.git": true,
     "**/.gitignore": true,
     "**/package-lock.json": true,
-    "**/package.json": true,
+    "**/package.json": false,
     "**/public": true,
     "**/node_modules": true,
     "**/README.md": true,

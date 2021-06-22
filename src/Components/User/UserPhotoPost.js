@@ -18,7 +18,7 @@ const UserPhotoPost = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    if (data) navigate('/conta');
+    if (data) navigate('/spa-w-react/conta');
   }, [data, navigate]);
 
   function handleSubmit(event) {
@@ -32,6 +32,9 @@ const UserPhotoPost = () => {
     const token = window.localStorage.getItem('token');
     const { url, options } = PHOTO_POST(formData, token);
     request(url, options);
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 
   function handleImgChange({ target }) {

@@ -19,8 +19,6 @@ const LoginPasswordLost = () => {
         login: login.value,
         url: window.location.href.replace('perdeu', 'resetar'),
       });
-      const { json } = await request(url, options);
-      console.log(json);
     }
   }
 
@@ -29,7 +27,13 @@ const LoginPasswordLost = () => {
       <Head title="Perdeu a senha?" description="Perdeu a senha?" />
       <h1 className="title">Perdeu a senha?</h1>
       {data ? (
-        <p style={{ color: '#4c1' }}>{data}</p>
+        <>
+          <p style={{ color: '#4c1' }}>{data}</p>
+          {'\n'}
+          <p style={{ color: '#f00', marginTop: '0.5rem' }} className="aviso">
+            Validação do link enviado por e-mail está em desenvolvimento.
+          </p>
+        </>
       ) : (
         <form onSubmit={handleSubmit}>
           <Input label="Email / Usuário" type="text" name="login" {...login} />

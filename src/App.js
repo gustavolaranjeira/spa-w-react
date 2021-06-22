@@ -20,12 +20,15 @@ function App() {
           <Header />
           <main className="AppBody">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="login/*" element={<Login />} />
-              <ProtectedRoute path="conta/*" element={<User />} />
-              <Route path="foto/:id" element={<Photo />} />
-              <Route path="perfil/:user" element={<UserProfile />} />
-              <Route path="*" element={<NotFound />} />
+              <Route path="/spa-w-react/" element={<Home />} />
+              <Route path="/spa-w-react/login/*" element={<Login />} />
+              <ProtectedRoute path="/spa-w-react/conta/*" element={<User />} />
+              <Route path="/spa-w-react/foto/:id" element={<Photo />} />
+              <Route
+                path="/spa-w-react/perfil/:user"
+                element={<UserProfile />}
+              />
+              <Route path="/spa-w-react/*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
